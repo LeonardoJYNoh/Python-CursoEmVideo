@@ -1,0 +1,5 @@
+x = input('digita alguam porra ai: ')
+print('o tipo primitivo é :', type(x))
+print(x.isnumeric())
+print(x.isalnum())
+print(x.isalpha())
