@@ -1,36 +1,40 @@
-'''Crie um programa que leia dois valores e mostre um menu na tela:
+"""
+Exercício Python 059: Crie um programa que leia dois valores e mostre um menu na tela:
 [ 1 ] somar
 [ 2 ] multiplicar
 [ 3 ] maior
 [ 4 ] novos números
-[ 5 ] sair do programa'''
+[ 5 ] sair do programa
+"""
 
-n1 = int(input('Primeiro valor: '))
-n2 = int(input('Segundo valor: '))
+x1 = int(input('Primeiro valor: '))
+x2 = int(input('Segudno valor: '))
 
 opcao = 0
 
-while opcao != 5:
-    print('''[1] somar
-[2] multiplicar
-[3] maior
-[4] novos números
-[5] sair do programa''')
-    opcao = int(input('>>>>> Qual é a sua opção? '))
-    if opcao == 1:
-        print('A soma entre {} + {} é {}'.format(n1, n2, n1+n2))
-    elif opcao == 2:
-        print('O resultado de {} x {} é {}'.format(n1, n2, n1*n2))
-    elif opcao == 3:
-        if n1 > n2:
-            maior = n1
+while opcao != '5':
+    print('''[ 1 ] somar
+[ 2 ] multiplicar
+[ 3 ] maior
+[ 4 ] novos números
+[ 5 ] sair do programa
+''')
+    opcao = input('>>>>> Qual é a sua opção? ')
+    if opcao == '1':
+        print('A soma entre {} + {} é {}'.format(x1, x2, x1+x2))
+    elif opcao == '2':
+        print('A multiplicação entre {} x {} é {}'.format(x1, x2, x1*x2))
+    elif opcao == '3':
+        if x1 > x2:
+            print('Entre {} e {} o maior é {}'.format(x1, x2, x1))
         else:
-            maior = n2
-        print('Entre {} e {} o maior valor é {}'.format(n1, n2, maior))
-    elif opcao == 4:
-        n1 = int(input('Primeiro valor: '))
-        n2 = int(input('Segundo valor: '))
-    elif opcao != 5:
-        print('Opção invalida')
+            print('Entre {} e {} o maior é {}'.format(x1, x2, x2))
+    elif opcao == '4':
+        print('Infome os números novamente:')
+        x1 = int(input('Primeiro valor: '))
+        x2 = int(input('Segundo valor: '))
+    elif opcao == '5':
+        print('Finalizando...')
+    else:
+        print('Opção inválida. Tente novamente')
     print('=-='*10)
-
